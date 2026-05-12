@@ -14,7 +14,7 @@ type Props = {
 
 export default async function ListingPage({ params }: Props) {
   const { id } = await params;
-  const res = await fetch(`http://localhost:5000/api/listings/${id}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/listings/${id}`);
   const json = await res.json();
   const listing = json.data;
   if (!listing) {

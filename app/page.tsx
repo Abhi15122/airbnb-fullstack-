@@ -4,7 +4,7 @@ import PropertyCard from "./features/PropertyCard";
 
 export default async function Home() {
   async function getlistings() {
-    const res = await fetch(`http://localhost:5000/api/listings`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/listings`);
     const data = await res.json();
     return data.data;
   }
