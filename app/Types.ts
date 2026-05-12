@@ -15,7 +15,7 @@ export interface Review {
 }
 
 export interface Listing {
-  _id: string;
+  _id?: string;
   id: string;
   title: string;
   price: number;
